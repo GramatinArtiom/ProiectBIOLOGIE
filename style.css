@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  body {
+    background-color: #1E1E1E;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 1em;
+  }
+  
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #232323;
+    outline: 1px solid rgb(50, 61, 72);
+  }
+  
+  #toolbar {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.44);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+  }
+  :root{
+    --index: calc(1vw + 1vh);
+    --gutter: 30px;
+    --size-small:29;
+    --size-big:38;
+    --depth:4900px;
+    --transition: .75s cubic-bezier(.075, .5, 0, 1)
+  }
+  
+  .toolbar-link {
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    ;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .image-container img:first-child {
+    opacity: 1;
+  }
+  
+  .message-box {
+    color: white;
+    font-size: calc(var(--index) * 1.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-image: linear-gradient(transparent, #1E1E1E);
+  }
+  
+  button {
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: calc(var(--index) * 1);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.44);
+    transition: 1s;
+    box-shadow: none;
+  }
+  
+  button:hover {
+    color: #232323;
+  }
+  
+  h1 {
+    padding: 50px;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 10px;
+    color:#232323;
+    font-size: calc(var(--index) * 1.25)
+  }
+  p{
+    padding: 50px;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 10px;
+    color:#232323;
+    font-size: calc(var(--index) * 0.75)
+  }

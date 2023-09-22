@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Biologie</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="toolbar">
+    <a href="Mitoza/Mitoza.html" class="toolbar-link">Mitoza</a>
+  </div>
+  <div class="image-container">
+        <img src="images/mitosis1.jpg" alt="Image 1">
+          <img src="images/mitosis2.jpg" alt="Image 2">
+          <img src="images/mitosis3.jpg" alt="Image 3">
+          <img src="images/mitosis4.jpg" alt="Image 4">
+          <img src="images/mitosis25jpg.jpg" alt="Image 5">
+          <img src="images/mitosis6.jpg" alt="Image 6">
+    <div class="overlay"></div>
+    <div class="message-box">
+      <h1>Proiect la materia "Biologie"</h1>
+      <div id="section-to-scroll-to"></div>
+      <p>
+        Mitoza este un proces de diviziune celulară care are loc în celulele somatice (celulele care alcătuiesc majoritatea țesuturilor corpului)
+         și servește la creștere, înlocuirea celulelor uzate și repararea țesuturilor. Mitoza are patru etape principale: profaza, metafaza, anafaza
+          și telofaza .Mitoza asigură păstrarea numărului corect de cromozomi în celulele fiice și este un proces esențial pentru dezvoltare, creștere
+           și întreținerea organismelor multicelulare.
+      </p>
+    </div>
+  </div>
+  
+      <script>
+        const images = document.querySelectorAll('.image-container img');
+        let index = 0;
+
+        setInterval(() => {
+          images[index].style.opacity = 0;
+          index = (index + 1) % images.length;
+          images[index].style.opacity = 1;
+        }, 3000);
+
+        document.getElementById("scroll-button").addEventListener("click", function () {
+          window.scrollBy({
+            top: 6000,
+            behavior: "smooth"
+          });
+        });
+      </script>
+</body>
+
+</html>
